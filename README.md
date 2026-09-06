@@ -40,7 +40,6 @@ The resulting behavior demonstrated that:
 - `tailscale status` could still see the peer
 - `tailscale ping` could still provide peer/path diagnostics
 - Ordinary ICMP traffic failed
-- SSH connectivity timed out
 
 Restoring the grant restored ordinary connectivity.
 
