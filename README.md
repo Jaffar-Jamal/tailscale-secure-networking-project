@@ -22,7 +22,7 @@ The environment consisted of:
 - Tested MagicDNS hostname resolution
 - Observed DERP-relayed connectivity transition to a direct peer connection
 - Used `tailscale status`, `tailscale ping`, and `tailscale netcheck` for diagnostics
-- Blocked public TCP/22 access through the Azure network configuration while maintaining administrative access with Tailscale SSH
+- Verified public TCP/22 was blocked by the Azure network configuration while maintaining administrative access with Tailscale SSH
 - Tested Tailscale access-policy behavior by removing and restoring an allow grant
 - Reproduced and diagnosed an application timeout caused by a Linux host firewall rule
 - Used an Access → Service → Firewall troubleshooting workflow to isolate the failure
@@ -84,7 +84,7 @@ ping 10.10.1.5
 
 successfully reached `ts-private-test` with **0% packet loss**.
 
-Because the target had no Tailscale client and no public IP, this validated connectivity through the Tailscale subnet router into the Azure private network.
+Because the target had no Tailscale client and no public IP, the successful test demonstrated connectivity from the Windows tailnet device to the Azure private subnet through the configured subnet router.
 
 ## Documentation
 
@@ -103,7 +103,7 @@ Detailed implementation and troubleshooting evidence:
 
 This project strengthened my practical understanding of:
 
-- Tailscale peer connectivity and identity-based access
+- Tailscale peer connectivity and access controls
 - Direct versus DERP-relayed connection paths
 - MagicDNS and Tailscale addressing
 - Network and service-layer troubleshooting
@@ -112,4 +112,3 @@ This project strengthened my practical understanding of:
 - Subnet routing into private networks
 - Evidence-based troubleshooting and verification
 
-The lab was intentionally built as a temporary cloud environment. After documenting the implementation and results, the Azure resources can be decommissioned to avoid unnecessary ongoing cloud costs.
