@@ -38,7 +38,7 @@ Ubuntu 24.04
 No Tailscale / No Public IP
 ```
 
-A visual architecture diagram will also be added to the repository.
+![Tailscale Azure lab architecture](diagrams/architecture.png)
 
 ## What I Implemented
 
