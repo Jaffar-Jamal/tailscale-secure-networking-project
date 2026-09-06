@@ -70,15 +70,6 @@ The result was:
 ```text
 Packets: Sent = 4, Received = 0, Lost = 4 (100% loss)
 ```
-
-SSH connectivity was also tested:
-
-```powershell
-ssh azureuser@ts-linux-01
-```
-
-The connection timed out on TCP/22.
-
 ![Connected but not authorized](../screenshots/11-access-policy-connected-but-not-authorized.png)
 
 The combined results demonstrated an important distinction:
