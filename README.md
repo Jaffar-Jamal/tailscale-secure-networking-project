@@ -14,30 +14,6 @@ The environment consisted of:
 - Azure VNet and subnet (`10.10.1.0/24`)
 - Tailscale subnet routing through `ts-linux-01`
 
-```text
-Windows 11 Workstation
-cyberjam
-100.82.49.40
-        |
-        |  Tailscale
-        v
-ts-linux-01
-Ubuntu 24.04 / Azure
-100.86.127.106
-10.10.1.4
-        |
-        |  Subnet routing
-        v
-Azure VNet
-10.10.1.0/24
-        |
-        v
-ts-private-test
-Ubuntu 24.04
-10.10.1.5
-No Tailscale / No Public IP
-```
-
 ![Tailscale Azure lab architecture](diagrams/architecture.png)
 
 ## What I Implemented
