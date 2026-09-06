@@ -1,4 +1,4 @@
-# Tailscale Secure Networking & Troubleshooting Lab
+# Tailscale Secure Networking & Troubleshooting Project
 
 Hands-on networking and troubleshooting lab using **Tailscale, Microsoft Azure, Linux, Windows, Bash, and PowerShell**.
 
