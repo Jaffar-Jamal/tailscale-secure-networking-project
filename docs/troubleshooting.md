@@ -17,7 +17,7 @@ The exercises focused on two common troubleshooting areas:
 
 Both the Windows workstation and Linux VM were connected to the tailnet.
 
-The default Tailscale grant allowed all traffic:
+The lab initially used Tailscale's default allow-all grant:
 
 ```json
 {"src": ["*"], "dst": ["*"], "ip": ["*"]}
