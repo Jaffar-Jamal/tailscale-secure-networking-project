@@ -97,7 +97,7 @@ These commands answer different troubleshooting questions:
 
 The next objective was to reach a machine inside the Azure VNet that did not have Tailscale installed.
 
-The Azure network used:
+The Azure private subnet used:
 
 ```text
 10.10.1.0/24
@@ -204,7 +204,7 @@ ts-linux-01
 Tailscale subnet router
         |
         v
-Azure VNet - 10.10.1.0/24
+Azure private subnet - 10.10.1.0/24
         |
         v
 ts-private-test - 10.10.1.5
