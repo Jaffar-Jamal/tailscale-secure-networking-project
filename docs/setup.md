@@ -48,7 +48,7 @@ After installing and authenticating Tailscale on the Windows workstation and `ts
 The environment provided three distinct addressing contexts:
 
 - Azure public IP — Internet-facing connectivity
-- Azure private `10.10.1.0/24` network — communication inside the Azure VNet
+- Azure private subnet `10.10.1.0/24` — private communication inside the Azure VNet
 - Tailscale `100.x` addresses — private tailnet connectivity between Tailscale nodes
 
 ## MagicDNS
@@ -74,7 +74,7 @@ The Azure Network Security Group did not contain a custom inbound rule permittin
 
 ![Azure NSG inbound rules](../screenshots/06-azure-nsg-public-ssh-blocked.png)
 
-Public SSH reachability was tested from Windows:
+Public TCP/22 reachability to the Azure VM was tested from Windows:
 
 ```powershell
 Test-NetConnection <public-ip> -Port 22
@@ -106,7 +106,7 @@ The initial environment established:
 
 - Private connectivity between Windows and Linux through Tailscale
 - MagicDNS hostname resolution
-- Public TCP/22 access blocked by the Azure network configuration
+- Public TCP/22 connectivity verified as blocked from the Windows workstation
 - Administrative SSH access through Tailscale SSH
 - An Azure private-only VM available for later subnet-routing validation
 
